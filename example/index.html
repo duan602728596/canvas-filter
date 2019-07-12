@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="index.css" rel="stylesheet">
+</head>
+<body>
+<button id="btn" type="button">点击生成滤镜</button>
+<ul class="flexBox">
+  <!-- 原图 -->
+  <li class="flexItem">
+    <h4>原图</h4>
+    <div class="imageBox" id="imageBox"></div>
+  </li>
+
+  <!-- 灰度滤镜 -->
+  <li class="flexItem">
+    <h4>灰度滤镜</h4>
+    <canvas id="canvas-gray-scale" width="400" height="274"></canvas>
+  </li>
+
+  <!-- 黑白滤镜 -->
+  <li class="flexItem">
+    <h4>黑白滤镜</h4>
+    <canvas id="canvas-black-and-white" width="400" height="274"></canvas>
+  </li>
+
+  <!-- 反色滤镜 -->
+  <li class="flexItem">
+    <h4>反色滤镜</h4>
+    <canvas id="canvas-inverted" width="400" height="274"></canvas>
+  </li>
+
+  <!-- 模糊滤镜 -->
+  <li class="flexItem">
+    <h4>模糊滤镜</h4>
+    <canvas id="canvas-blur" width="400" height="274"></canvas>
+  </li>
+
+  <!-- 马赛克滤镜 -->
+  <li class="flexItem">
+    <h4>马赛克滤镜</h4>
+    <canvas id="canvas-mosaic" width="400" height="274"></canvas>
+  </li>
+</ul>
+
+<script src="../dist/canvasFilter.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

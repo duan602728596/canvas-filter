@@ -1,0 +1,27 @@
+# node
+node_modules
+npm-debug.log
+package-lock.json
+
+# yarn
+yarn.lock
+yarn-error.log
+
+# ignore
+.npmignore
+.gitignore
+.eslintignore
+
+# packages
+src
+tests
+example
+scripts
+.editorconfig
+.eslintrc.yml
+.lintstagedrc.yml
+gulpfile.js
+tsconfig.json
+tslint.yml
+
+.DS_Store
