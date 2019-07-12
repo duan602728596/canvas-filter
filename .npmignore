@@ -7,6 +7,9 @@ package-lock.json
 yarn.lock
 yarn-error.log
 
+# webstorm
+.idea
+
 # ignore
 .npmignore
 .gitignore
