@@ -25,7 +25,8 @@ function devTsProject() {
 
 // 监听文件变化
 function devWatch() {
-  gulp.watch('src/**/*.{ts,tsx}', devTsProject);
+  // eslint-disable-next-line no-use-before-define
+  gulp.watch('src/**/*.{ts,tsx}', gulp.series(devTsProject, dist));
 }
 
 /* ========== 生产环境工程 ========== */
