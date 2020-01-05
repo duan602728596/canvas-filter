@@ -39,9 +39,8 @@
     }
   },
   "lint-staged": {
-    "packages/**/*.{js,jsx,ts,tsx}": "eslint",
-    "packages/**/*.{ts,tsx}": "tslint",
-    "scripts/**/*.{ts,tsx}": "tslint"
+    "**/*.{js,jsx,ts,tsx}": "eslint",
+    "**/*.{ts,tsx}": "tslint"
   },
   "config": {
     "commitizen": {
