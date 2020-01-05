@@ -20,12 +20,12 @@ function devTsProject() {
     .pipe(plumber())
     .pipe(typescript(tsconfig.compilerOptions));
 
-  result.js.pipe(gulp.dest('lib'));
+  return result.js.pipe(gulp.dest('lib'));
 }
 
 // 监听文件变化
 function devWatch() {
-  gulp.watch('src/**/*.{ts,tsx}', gulp.series(devTsProject, devDist));
+  gulp.watch('src/**/*.{ts,tsx}', devTsProject);
 }
 
 /* ========== 生产环境工程 ========== */
