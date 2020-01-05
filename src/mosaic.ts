@@ -14,7 +14,7 @@ function mosaic(imageData: ImageData, options: MosaicOptions = {}): ImageData {
 
   const { size = 8 }: MosaicOptions = options;
 
-  const totalNum: number = size ** 2;
+  const totalNum: number = size ** 2; // 每块大小
 
   for (let i: number = 0; i < height; i += size) {
     for (let j: number = 0; j < width; j += size) {
@@ -26,18 +26,17 @@ function mosaic(imageData: ImageData, options: MosaicOptions = {}): ImageData {
         for (let dy: number = 0; dy < size; dy++) {
           const x: number = i + dx;
           const y: number = j + dy;
-
           const p: number = (x * width) + y;
 
-          totalR += pixelData[p * 4];
-          totalG += pixelData[(p * 4) + 1];
-          totalB += pixelData[(p * 4) + 2];
+          totalR += pixelData?.[p * 4] ?? 0;
+          totalG += pixelData?.[(p * 4) + 1] ?? 0;
+          totalB += pixelData?.[(p * 4) + 2] ?? 0;
         }
       }
 
-      const resR: number = totalR / totalNum;
-      const resG: number = totalG / totalNum;
-      const resB: number = totalB / totalNum;
+      const resR: number = totalR / totalNum,
+        resG: number = totalG / totalNum,
+        resB: number = totalB / totalNum;
 
       for (let dx: number = 0; dx < size; dx++) {
         for (let dy: number = 0; dy < size; dy++) {
